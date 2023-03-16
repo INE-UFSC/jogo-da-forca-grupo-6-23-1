@@ -53,7 +53,7 @@ class Jogo():
                     self.letras_erradas.append(chute)
             else:
                 if palavra.verificaChutePalavra(chute):
-                    print(f'Você acertou a palavra:')
+                    print(f'Você acertou a palavra!')
                     break
                 else:
                     print('Você perdeu :(')

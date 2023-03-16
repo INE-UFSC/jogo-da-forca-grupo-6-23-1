@@ -18,6 +18,8 @@ class Palavra():
 
         arquivo_lista_nomes.close()
 
+        print(self.palavra_chave)
+
         for letra in self.palavra_chave:
             self.palavra_chave_escondida+='_'
 
@@ -30,9 +32,11 @@ class Palavra():
 
     def temLetra(self, chute:str):
         if self.palavra_chave.lower().count(chute.lower()) > 0:
-            for i in range(len(self.palavra_chave)-1):
-                if chute==self.palavra_chave[i]:
-                    self.palavra_chave_escondida[i]=self.palavra_chave[i]
+            for i in range(len(self.palavra_chave)):
+                if i == 0 and chute.lower() == self.palavra_chave[i].lower():
+                   self.palavra_chave_escondida = chute + self.palavra_chave_escondida[i+1:]
+                elif chute.lower() == self.palavra_chave[i].lower():
+                    self.palavra_chave_escondida = self.palavra_chave_escondida[:i] + chute + self.palavra_chave_escondida[i+1:]
             return True
         else:
             return False
