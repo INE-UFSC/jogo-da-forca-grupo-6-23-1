@@ -2,6 +2,7 @@ import json
 import random
 
 class Palavra():
+    
     def __init__(self):
         self.palavra_chave = ''
         self.palavra_chave_escondida = ''
@@ -34,5 +35,5 @@ class Palavra():
         else:
             return False
 
-    def printPalavra(self):
+    def getPalavra(self):
         return self.palavra_chave_escondida

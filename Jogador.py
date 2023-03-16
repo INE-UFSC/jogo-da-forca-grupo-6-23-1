@@ -1,12 +1,13 @@
 class Jogador():
-    
-    def __init__(self):
-        self.vida = 6
+
+    def __init__(self, vida):
+        self.vida = vida
     
     def perdeVida(self):
         self.vida -= 1
+        return self.vida
 
-    def mostra_vida(self):
+    def mostraVida(self):
         if self.vida == 6:
             print("Você ainda tem 6 vidas")
                         
@@ -37,3 +38,6 @@ class Jogador():
             print(" O")
             print("/|\\")
             print("/ \\")
+
+    def getVida(self):
+        return self.vida
