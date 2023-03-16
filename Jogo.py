@@ -37,7 +37,7 @@ class Jogo():
             if jogador.getVida() <= 0:
                 self.layout(jogador, palavra)
                 print('Você perdeu :(')
-                print(palavra.getPalavraOriginal())
+                print('A palavra era: ',palavra.getPalavraOriginal())
                 break
 
             self.layout(jogador, palavra)
@@ -63,5 +63,7 @@ class Jogo():
                     break
                 else:
                     print('Você perdeu :(')
-                    print(palavra.getPalavraOriginal())
+                    print('A palavra era: ',palavra.getPalavraOriginal())
                     break
+        self.letras_certas.clear()
+        self.letras_erradas.clear()
