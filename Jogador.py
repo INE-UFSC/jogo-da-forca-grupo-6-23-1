@@ -3,6 +3,9 @@ class Jogador():
     def __init__(self):
         self.vida = 6
     
+    def perdeVida(self):
+        self.vida -= 1
+
     def mostra_vida(self):
         if self.vida == 6:
             print("Você ainda tem 6 vidas")
