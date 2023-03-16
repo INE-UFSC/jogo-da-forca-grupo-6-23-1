@@ -35,8 +35,10 @@ class Jogo():
 
         while True:
             if jogador.getVida() <= 0:
+                self.layout(jogador, palavra)
                 print('Você perdeu :(')
                 break
+
             self.layout(jogador, palavra)
             while True:
                 chute = input('Digite o chute: \n> ')
