@@ -5,7 +5,6 @@ class Jogador():
     
     def perdeVida(self):
         self.vida -= 1
-        return self.vida
 
     def mostraVida(self):
         if self.vida == 6:

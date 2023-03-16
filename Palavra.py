@@ -30,7 +30,9 @@ class Palavra():
 
     def temLetra(self, chute:str):
         if self.palavra_chave.lower().count(chute.lower()) > 0:
-            #falta adicionar logica para atualizar o self.palavra_chave_escondida
+            for i in range(len(self.palavra_chave)-1):
+                if chute==self.palavra_chave[i]:
+                    self.palavra_chave_escondida[i]=self.palavra_chave[i]
             return True
         else:
             return False
