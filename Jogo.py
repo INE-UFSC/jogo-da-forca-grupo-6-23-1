@@ -20,7 +20,7 @@ class Jogo():
 
     def main(self):
         while True:
-            dificuldade = unidecode(input('''Defina a dificuldade:\n- fácil \n- médio \n- dificil \n- muito dificil> ''').lower())
+            dificuldade = unidecode(input('''Defina a dificuldade:\n- fácil \n- médio \n- dificil \n- muito dificil \n> ''').lower())
             if dificuldade=='facil' or dificuldade=='medio' or dificuldade=='dificil' or dificuldade=='muito dificil':
                 if dificuldade=='muito dificil':
                     dificuldade='muito_dificil'
@@ -28,8 +28,7 @@ class Jogo():
             else:
                 print('Opção Inválida')
 
-        palavra_chute = Palavra().gerarPalavra(dificuldade)
-        print(palavra_chute)
+        Palavra().gerarPalavra(dificuldade)
         jogador=Jogador(6)
 
         while True:
@@ -45,13 +44,13 @@ class Jogo():
                     break
 
             if len(chute)==1:
-                if ...:
+                if Palavra().temLetra():
                     self.letras_certas.append(chute)
                 else:
                     jogador.perdeVida()
                     self.letras_erradas.append(chute)
             else:
-                if ....verificaChutePalavra(chute):
+                if Palavra().verificaChutePalavra(chute):
                     print(f'Você acertou a palavra: {palavra_chute}')
                     break
                 else:
