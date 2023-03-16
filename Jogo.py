@@ -3,6 +3,10 @@ from Jogador import Jogador
 
 class Jogo():
 
+    def __init__(self):
+        self.letras_erradas = []
+        self.letras_certas = []
+
     def layout(self):
         '''to do'''
         #printar a forca e a palavra escondida aqui
@@ -11,8 +15,6 @@ class Jogo():
 
 
     def main(self):
-        letras_erradas=[]
-        letras_certas=[]
         while True:
             dificuldade = input('''Defina a dificuldade:
 - fácil
@@ -40,10 +42,10 @@ class Jogo():
                         print('Você deve digitar algo')
                     elif len(chute)==1:
                         if Palavra.temLetra(chute):
-                            letras_certas.append(chute)
+                            self.letras_certas.append(chute)
                         else:
                             jogador.perdeVida()
-                            letras_erradas.append(chute)
+                            self.letras_erradas.append(chute)
                     else:
                         if Palavra.verificaChutePalavra():
                             print(f'Você acertou a palavra: {palavra_chute}')
