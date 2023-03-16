@@ -21,8 +21,6 @@ class Palavra():
         for letra in self.palavra_chave:
             self.palavra_chave_escondida+='_'
 
-        return self.palavra_chave
-
     def verificaChutePalavra(self, chute:str):
         if chute.lower() == self.palavra_chave.lower():
             self.palavra_chave_escondida = self.palavra_chave
