@@ -32,10 +32,19 @@ class Palavra():
         if self.palavra_chave.lower().count(chute.lower()) > 0:
             for i in range(len(self.palavra_chave)-1):
                 if chute==self.palavra_chave[i]:
+                    self.palavra_chave_escondida = list(self.palavra_chave_escondida)
+                    self.palavra_chave = list(self.palavra_chave)
+
                     self.palavra_chave_escondida[i]=self.palavra_chave[i]
+
+                    self.palavra_chave_escondida = ''.join(self.palavra_chave_escondida)
+                    self.palavra_chave = ''.join(self.palavra_chave)
             return True
         else:
             return False
 
     def getPalavra(self):
         return self.palavra_chave_escondida
+    
+    def getPalavraOriginal(self):
+        return self.palavra_chave

@@ -36,6 +36,7 @@ class Jogo():
         while True:
             if jogador.getVida() <= 0:
                 print('Você perdeu :(')
+                print(palavra.getPalavraOriginal())
                 break
             self.layout(jogador, palavra)
             while True:
@@ -57,4 +58,5 @@ class Jogo():
                     break
                 else:
                     print('Você perdeu :(')
+                    print(palavra.getPalavraOriginal())
                     break
