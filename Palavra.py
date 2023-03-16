@@ -2,6 +2,7 @@ import json
 import random
 
 class Palavra():
+    
     def __init__(self):
         self.palavra_chave = ''
         self.palavra_chave_escondida = ''
@@ -20,6 +21,8 @@ class Palavra():
         for letra in self.palavra_chave:
             self.palavra_chave_escondida+='_'
 
+        return self.palavra_chave
+
     def verificaChutePalavra(self, chute:str):
         if chute.lower() == self.palavra_chave.lower():
             self.palavra_chave_escondida = self.palavra_chave
@@ -29,10 +32,12 @@ class Palavra():
 
     def temLetra(self, chute:str):
         if self.palavra_chave.lower().count(chute.lower()) > 0:
-            #falta adicionar logica para atualizar o self.palavra_chave_escondida
+            for i in range(len(self.palavra_chave)-1):
+                if chute==self.palavra_chave[i]:
+                    self.palavra_chave_escondida[i]=self.palavra_chave[i]
             return True
         else:
             return False
 
-    def printPalavra(self):
+    def getPalavra(self):
         return self.palavra_chave_escondida
