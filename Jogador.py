@@ -5,31 +5,32 @@ class Jogador():
     
     def mostra_vida(self):
         if self.vida == 6:
-            print(' O')
-            print('/|\\')
-            print('/ \\')
+            print("Você ainda tem 6 vidas")
                         
         if self.vida == 5:
             print(" O")
-            print("/|\\")
-            print("  \\")
-           
-            
+                       
         if self.vida == 4:
-            print(" O")
-            print(" |\\")
-            print("  \\")
-            
-        if self.vida == 3:
-            print(" O")
-            print(" |\\")
-            
-        if self.vida == 2:
             print(" O")
             print(" |")
             
+            
+        if self.vida == 3:
+            print(" O")
+            print("/|")
+            
+            
+        if self.vida == 2:
+            print(" O")
+            print("/|\\")
+            
+            
         if self.vida == 1:
-            print("O")
+            print(" O")
+            print("/|\\")
+            print("/")
             
         if self.vida == 0:
-            print("Você perdeu!")
+            print(" O")
+            print("/|\\")
+            print("/ \\")
