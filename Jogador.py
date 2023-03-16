@@ -7,30 +7,30 @@ class Jogador():
         if self.vida == 6:
             print("Você ainda tem 6 vidas")
                         
-        if self.vida == 5:
+        elif self.vida == 5:
             print(" O")
                        
-        if self.vida == 4:
+        elif self.vida == 4:
             print(" O")
             print(" |")
             
             
-        if self.vida == 3:
+        elif self.vida == 3:
             print(" O")
             print("/|")
             
             
-        if self.vida == 2:
+        elif self.vida == 2:
             print(" O")
             print("/|\\")
             
             
-        if self.vida == 1:
+        elif self.vida == 1:
             print(" O")
             print("/|\\")
             print("/")
             
-        if self.vida == 0:
+        elif self.vida == 0:
             print(" O")
             print("/|\\")
             print("/ \\")
