@@ -35,9 +35,11 @@ class Jogo():
 
         while True:
             if jogador.getVida() <= 0:
+                self.layout(jogador, palavra)
                 print('Você perdeu :(')
                 print(palavra.getPalavraOriginal())
                 break
+
             self.layout(jogador, palavra)
             while True:
                 chute = input('Digite o chute: \n> ')
@@ -49,12 +51,15 @@ class Jogo():
             if len(chute) == 1:
                 if palavra.temLetra(chute):
                     self.letras_certas.append(chute)
+                    if palavra.verificaChutePalavra(palavra.getPalavra()):
+                        print("Você venceu!")
+                        break
                 else:
                     jogador.perdeVida()
                     self.letras_erradas.append(chute)
             else:
                 if palavra.verificaChutePalavra(chute):
-                    print(f'Você acertou a palavra:')
+                    print(f'Você acertou a palavra!')
                     break
                 else:
                     print('Você perdeu :(')
