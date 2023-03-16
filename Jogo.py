@@ -48,6 +48,9 @@ class Jogo():
             if len(chute) == 1:
                 if palavra.temLetra(chute):
                     self.letras_certas.append(chute)
+                    if palavra.verificaChutePalavra(palavra.getPalavra()):
+                        print("Você venceu!")
+                        break
                 else:
                     jogador.perdeVida()
                     self.letras_erradas.append(chute)

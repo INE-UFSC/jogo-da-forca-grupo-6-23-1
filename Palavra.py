@@ -18,8 +18,6 @@ class Palavra():
 
         arquivo_lista_nomes.close()
 
-        print(self.palavra_chave)
-
         for letra in self.palavra_chave:
             self.palavra_chave_escondida+='_'
 
