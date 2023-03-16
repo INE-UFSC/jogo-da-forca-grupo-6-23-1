@@ -1,6 +1,8 @@
 from Palavra import Palavra 
 from Jogador import Jogador
 
+jogador = Jogador()
+palavra = Palavra()
 class Jogo():
   
   
@@ -9,11 +11,18 @@ class Jogo():
         self.letras_erradas = letras_erradas
         self.letras_certas = letras_certas
 
-    def layout():
-        '''to do'''
-        print('to do')
+    
+    
+    def layout(self):
+        print(f"""                                          
+
+                                 Letras erradas: {self.letras_erradas}""")
+        jogador.mostra_vida()     
+        print(f"""                   Palavra:  {palavra.printPalavra()} """)
 
 
 
-    def main():
-        return None
+    def main(self):
+        self.layout()
+
+        

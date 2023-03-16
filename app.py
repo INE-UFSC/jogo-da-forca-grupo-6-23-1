@@ -1,3 +1,4 @@
 from Jogo import Jogo
 
-Jogo.main()
+comecar = Jogo()
+comecar.main()

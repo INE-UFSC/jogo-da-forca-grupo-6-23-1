@@ -8,32 +8,79 @@ class Jogador():
 
     def mostra_vida(self):
         if self.vida == 6:
-            print("Você ainda tem 6 vidas")
+            print("""
+                   --------
+                   |      |
+                   |      
+                   |    
+                   |      
+                   |     
+                   -
+                """)
                         
         elif self.vida == 5:
-            print(" O")
+            print("""
+                   --------
+                   |      |
+                   |      O
+                   |    
+                   |      
+                   |     
+                   -
+                """)
                        
         elif self.vida == 4:
-            print(" O")
-            print(" |")
-            
+            print("""
+                   --------
+                   |      |
+                   |      O
+                   |      |
+                   |      |
+                   |     
+                   -
+                """)
             
         elif self.vida == 3:
-            print(" O")
-            print("/|")
+            print("""
+                   --------
+                   |      |
+                   |      O
+                   |     \\|
+                   |      |
+                   |     
+                   -
+                """)
             
             
         elif self.vida == 2:
-            print(" O")
-            print("/|\\")
-            
+            print("""
+                   --------
+                   |      |
+                   |      O
+                   |     \\|/
+                   |      |
+                   |      
+                   -
+                """)
             
         elif self.vida == 1:
-            print(" O")
-            print("/|\\")
-            print("/")
+            print("""
+                   --------
+                   |      |
+                   |      O
+                   |     \\|/
+                   |      |
+                   |     / 
+                   -
+                """)
             
         elif self.vida == 0:
-            print(" O")
-            print("/|\\")
-            print("/ \\")
+            print("""
+                   --------
+                   |      |
+                   |      O
+                   |     \\|/
+                   |      |
+                   |     / \\
+                   -
+                """)
