@@ -20,8 +20,10 @@ class Jogo():
 
     def main(self):
         while True:
-            dificuldade = unidecode(input('''Defina a dificuldade:\n- fácil \n- médio \n- dificil> ''').lower())
-            if dificuldade=='facil' or dificuldade=='medio' or dificuldade=='dificil':
+            dificuldade = unidecode(input('''Defina a dificuldade:\n- fácil \n- médio \n- dificil \n- muito dificil> ''').lower())
+            if dificuldade=='facil' or dificuldade=='medio' or dificuldade=='dificil' or dificuldade=='muito dificil':
+                if dificuldade=='muito dificil':
+                    dificuldade='muito_dificil'
                 break
             else:
                 print('Opção Inválida')
