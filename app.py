@@ -1,3 +1,3 @@
 from Jogo import Jogo
 
-Jogo.main()
+Jogo().main()
