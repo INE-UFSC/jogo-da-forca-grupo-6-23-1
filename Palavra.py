@@ -5,6 +5,9 @@ class Palavra():
     def __init__(self):
         self.palavra_chave = ''
         self.palavra_chave_escondida = ''
+
+    def getTamanhoPalavra(self):
+        return len(self.palavra_chave)
     
     def gerarPalavra(self, dificuldade):
         arquivo_lista_nomes = open('./utils/lista_palavras.json', "r")
@@ -17,19 +20,19 @@ class Palavra():
         for letra in self.palavra_chave:
             self.palavra_chave_escondida+='_'
 
+    def verificaChutePalavra(self, chute:str):
+        if chute.lower() == self.palavra_chave.lower():
+            self.palavra_chave_escondida = self.palavra_chave
+            return True
+        else: 
+            return False
+
     def temLetra(self, chute:str):
-        if len(chute)==1:
-            if chute in self.palavra_chave:
-                ... #revela as vezes que a letra apareceu na palavra
-            else:
-                ... #perde uma vida
-        elif len(chute)==len(self.palavra_chave):
-            if chute==self.palavra_chave:
-                ... #ganhar
-            else:
-                ... #perder
+        if self.palavra_chave.lower().count(chute.lower()) > 0:
+            #falta adicionar logica para atualizar o self.palavra_chave_escondida
+            return True
         else:
-            return "Chute inválido"
+            return False
 
     def printPalavra(self):
         return self.palavra_chave_escondida
