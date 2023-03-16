@@ -20,7 +20,7 @@ class Jogo():
 
     def main(self):
         while True:
-            dificuldade = unidecode(input('''Defina a dificuldade:/n- fácil /n- médio /n- dificil> ''').lower())
+            dificuldade = unidecode(input('''Defina a dificuldade:\n- fácil \n- médio \n- dificil> ''').lower())
             if dificuldade=='facil' or dificuldade=='medio' or dificuldade=='dificil':
                 break
             else:
