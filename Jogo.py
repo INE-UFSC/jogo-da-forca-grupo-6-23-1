@@ -42,9 +42,9 @@ class Jogo():
                         print('Você deve digitar algo')
                     elif len(chute)==1:
                         if Palavra.temLetra(chute):
-                            ...
+                            self.letras_certas.append(chute)
                         else:
-                            ...
+                            self.letras_erradas.append(chute)
                     else:
                         if Palavra.verificaChutePalavra():
                             ...
